@@ -14,6 +14,6 @@ class SessionsController < ApplicationController
   def destroy 
     session.delete :name
     flash[:error] = "successfully logged out"
-    render new
+    redirect_to sessions_new_path
   end
 end
