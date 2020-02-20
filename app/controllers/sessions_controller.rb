@@ -13,5 +13,7 @@ class SessionsController < ApplicationController
   
   def destroy 
     session.delete :name
+    flash[:error] = "successfully logged out"
+    render new
   end
 end
